@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import prisma from '../database/client.js'
 import { includeRelations } from '../lib/utils.js'
+=======
+import prisma from '../../database/client.js'
+>>>>>>> 2d0bc48c0fff22cde12d9a7dfceed104124b8385
 
 const controller = {}   // Objeto vazio
 
@@ -29,11 +33,16 @@ controller.create = async function(req, res) {
 
 controller.retrieveAll = async function(req, res) {
   try {
+<<<<<<< HEAD
     const include = includeRelations(req.query)
     
     // Manda buscar todas as categorias cadastradas no BD
     const result = await prisma.categoria.findMany({
       include,
+=======
+    // Manda buscar todas as categorias cadastradas no BD
+    const result = await prisma.categoria.findMany({
+>>>>>>> 2d0bc48c0fff22cde12d9a7dfceed104124b8385
       orderBy: [ { descricao: 'asc' }]  // Ordem ASCendente
     })
 
@@ -51,6 +60,7 @@ controller.retrieveAll = async function(req, res) {
   }
 }
 
+<<<<<<< HEAD
 controller.retrieveOne = async function(req, res) {
   try {
     const include = includeRelations(req.query)
@@ -135,4 +145,6 @@ controller.delete = async function(req, res) {
   }
 }
 
+=======
+>>>>>>> 2d0bc48c0fff22cde12d9a7dfceed104124b8385
 export default controller

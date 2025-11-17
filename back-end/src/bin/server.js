@@ -83,4 +83,8 @@ function onListening() {
   let addr = server.address()
   let bind = typeof addr === 'string' ? `pipe  ${addr}` : `port ${addr.port}`
   console.log(chalk.cyan(`Listening on ${bind}.`))
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2d0bc48c0fff22cde12d9a7dfceed104124b8385

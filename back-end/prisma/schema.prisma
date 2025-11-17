@@ -19,6 +19,7 @@ datasource db {
 model Categoria {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
   descricao   String
+<<<<<<< HEAD
   produtos    Produto[]
 }
 
@@ -100,3 +101,6 @@ model ItemPedido {
 
 
 
+=======
+}
+>>>>>>> 2d0bc48c0fff22cde12d9a7dfceed104124b8385
